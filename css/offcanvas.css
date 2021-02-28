@@ -1,0 +1,111 @@
+html
+body {
+  overflow-x: oculto; / * Evitar rolar em dispositivos estreitos * /
+}
+
+body {
+  top de preenchimento: 56px;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    posição: fixa;
+    top: 56px; / * Altura da navbar * /
+    fundo: 0;
+    esquerda: 100%;
+    largura: 100%;
+    preenchimento à direita: 1rem;
+    preenchimento esquerdo: 1rem;
+    estouro-y: auto;
+    visibilidade: oculto;
+    cor de fundo: # 343a40;
+    função de temporização de transição: facilidade-out-out;
+    duração da transição: .3s;
+    propriedade de transição: esquerda, visibilidade;
+  }
+  .offcanvas-collapse.open {
+    esquerda: 0;
+    visibilidade: visível;
+  }
+}
+
+.nav-scroller {
+  posição: relativa;
+  z-index: 2;
+  altura: 2,75rem;
+  estouro-y: oculto;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  exibição: flex;
+  -ms-flex-wrap: nowrap;
+  envoltório flex: nowrap;
+  fundo de enchimento: 1rem;
+  margem superior: -1px;
+  overflow-x: auto;
+  cor: rgba (255, 255, 255, 0,75);
+  texto-alinhar: centro;
+  espaço em branco: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  topo de enchimento: .75rem;
+  fundo de preenchimento: .75rem;
+  tamanho da fonte: .875rem;
+  cor: # 6c757d;
+}
+
+.nav-underline .nav-link: hover {
+  cor: # 007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  cor: # 343a40;
+}
+
+.text-white-50 {cor: rgba (255, 255, 255, 0,5); }
+
+.bg-purple {background-color: # 6f42c1; }
+
+.lh-100 {line-height: 1; }
+.lh-125 {altura da linha: 1,25; }
+.lh-150 {altura da linha: 1,5; }
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

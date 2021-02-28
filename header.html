@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">      
+        <link href="offcanvas.css" rel="stylesheet">
+        <link href="css/sticky-footer.css" rel="stylesheet">
+    <title>Ordem de Serviço - MVArquitetura</title>
+       
+</head>
+<script type="text/javascript">
+function tipoPagamentoSel() {
+  var pag = document.getElementById("opt-avista").checked;
+  if (pag) {
+    document.getElementById("avista").style.display = "block";
+    document.getElementById("aprazo").style.display = "none";
+  } else {
+    document.getElementById("avista").style.display = "none";
+    document.getElementById("aprazo").style.display = "block";
+  }
+}
+</script> 
+
+<script type="text/javascript">
+function pagamento() {
+  var paggamento = document.getElementById("opt-pagamento").onchange;
+  if (pagagamento) {
+    document.getElementById("avista").style.display = "block";
+    document.getElementById("aprazo").style.display = "none";
+  } else {
+    document.getElementById("avista").style.display = "none";
+    document.getElementById("aprazo").style.display = "block";
+  }
+}
+</script> 
+<script type="text/javascript">
+$('#modal').on('shown.bs.modal', function () {
+  $('#meuInput').trigger('focus')
+})
+</script>

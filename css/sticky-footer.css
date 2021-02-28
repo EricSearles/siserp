@@ -1,0 +1,28 @@
+/ * Estilos de rodapé pegajosos
+-------------------------------------------------- * /
+html {
+  posição: relativa;
+  min-altura: 100%;
+}
+body {
+  margem inferior: 60px; / * Margem inferior por altura do rodapé * /
+}
+.footer {
+  posição: absoluta;
+  fundo: 0;
+  largura: 100%;
+  altura: 60px; / * Defina a altura fixa do rodapé aqui * /
+  Altura da linha: 60px; / * Centraliza verticalmente o texto lá * /
+  background-color: # f5f5f5;
+}
+
+
+/ * CSS da página personalizada
+-------------------------------------------------- * /
+/ * Não é necessário para o modelo ou método de rodapé fixo. * /
+
+.container {
+  largura: auto;
+  max-width: 680px;
+  preenchimento: 0 15px;
+}
