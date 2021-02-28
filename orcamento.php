@@ -177,10 +177,11 @@ if (!empty($_SESSION['id'])) {
         if (empty($dados['servico'])) {
 
             $valorT = 0; //echo 'vazio';
+            $qtdS = 0;
 
         } else {
 
-            //monta loop para inserir serviços onde $id é o ID do item e $item é o VALORR do item
+            //monta loop para inserir serviços onde $id é o ID do item e $item é o VALOR do item
             foreach ($dados['servico'] as $id => $item) {
 
                 //aqui vai a funcao update serviço
@@ -208,13 +209,18 @@ if (!empty($_SESSION['id'])) {
                 $upValor = $objOrcamento->queryUpdateItemValor($id, $valor);
 
                 //soma os valores para obter valor total
-                $valorT = $valorT + $valor;
+               $valorT = floatval($valorT) + floatval($valor);
             }
+
+            $total1 = array_map(function($x, $y) { return $x * $y; }, $dados['qtd'], str_replace(',', '.', $dados['valor']));
+            $totalServicos = array_sum($total1);
+            
         }
 
         if (empty($dados['produto'])) {
 
             $valorP = 0; //echo 'vazio';
+            $qtdP = 0;
 
         } else {
 
@@ -253,13 +259,20 @@ if (!empty($_SESSION['id'])) {
                 $upValorProduto = $objOrcamento->queryUpdateItemValorProduto($id, $valorProduto);
 
                 //soma os valores para obter valor total
-                $valorP = $valorP + $valorProduto;
+                $valorP = floatval($valorP) + floatval($valorProduto);
             }
+
+
+            $total2 = array_map(function($x, $y) { return $x * $y; }, $dados['qtdProduto'], str_replace(',', '.', $dados['valorItemProduto']));
+            $totalProdutos = array_sum($total2);
+
         }
 
         //altera dados na tabela orçamento    
 
-        $valorTotalOrcamento = ($valorT * $qtdS) + ($valorP * $qtdP);
+        var_dump('Total Serviços: '.$totalServicos . ' - Total Produtos: '. $totalProdutos);
+
+        $valorTotalOrcamento = $totalServicos + $totalProdutos;
 
         $upOrcamento = $objOrcamento->queryUpdateOrcamento($dados, $valorTotalOrcamento);
     }

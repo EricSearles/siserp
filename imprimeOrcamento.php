@@ -262,7 +262,7 @@ echo'
         
         
         $verificaAssinatura = $objOrcamento->querySelecionaAssinaturaEmail($dados->idUsuario);
-        print_r($teste);
+
             
             //Seleciona dados do usuario para assinatura do rodapé
             foreach($objOrcamento->querySelecionaAssinaturaEmail($dados->idUsuario) as $res){
