@@ -262,7 +262,7 @@ echo'
         
         
         $verificaAssinatura = $objOrcamento->querySelecionaAssinaturaEmail($dados->idUsuario);
-        print_r($teste);
+
             
             //Seleciona dados do usuario para assinatura do rodapé
             foreach($objOrcamento->querySelecionaAssinaturaEmail($dados->idUsuario) as $res){
@@ -272,9 +272,9 @@ echo'
         ?>
         
         <!--NOME DO USUÁRIO NO RODAPÉ-->
-        <tr>
-            <td colspan="9"><?php echo $res->nomeUsuario;?></td>
-        </tr>
+        <!-- <tr>
+            <td colspan="9"><?php //echo $res->nomeUsuario;?></td>
+        </tr> -->
         
         <?php
             
@@ -292,32 +292,32 @@ echo'
                 
                 <!--PEGA OS DADOS DO CADASTRO DO USUARIO-->
                 ';
-                if((empty($verificaAssinatura))){
+                // if((empty($verificaAssinatura))){
                     
-                    echo '
-                    <tr>
-                    <td colspan="9" align="justify">
-                    <div class="alert alert-warning" role="alert">
-                    É necessário finalizar seu cadastro de usuário para que os dados de contato apareçam aqui.</br>
-                    Caso não deseje finalizar agora, esta mensagem não aparecerá no E-mail enviado e nem no <br/>relatório impresso.<br/>';
+                //     echo '
+                //     <tr>
+                //     <td colspan="9" align="justify">
+                //     <div class="alert alert-warning" role="alert">
+                //     É necessário finalizar seu cadastro de usuário para que os dados de contato apareçam aqui.</br>
+                //     Caso não deseje finalizar agora, esta mensagem não aparecerá no E-mail enviado e nem no <br/>relatório impresso.<br/>';
                     
-                    echo '<a href="dadosUsuario.php?acao=contato&retorno='.$_GET['busca'].'">Finalizar cadastro agora.</a></div>
-                    </td>
-                    </tr>
-                    ';
+                //     echo '<a href="dadosUsuario.php?acao=contato&retorno='.$_GET['busca'].'">Finalizar cadastro agora.</a></div>
+                //     </td>
+                //     </tr>
+                //     ';
                     
-                }else{
+                // }else{
                 
-                echo'
+                // echo'
                 
-                <tr>
-                    <td colspan="9">Cel.: ('.$res->dddcel.') '.$objFuncao->mask($res->cel, '#####-####').'</td>
-                </tr>
+                // <tr>
+                //     <td colspan="9">Cel.: ('.$res->dddcel.') '.$objFuncao->mask($res->cel, '#####-####').'</td>
+                // </tr>
                 
-                <tr>
-                    <td colspan="9">E-mail: '. $res->email.'</td>
-                </tr>';
-                }
+                // <tr>
+                //     <td colspan="9">E-mail: '. $res->email.'</td>
+                // </tr>';
+                // }
                 
                 echo '
                 <tr>
@@ -332,39 +332,39 @@ echo'
                 </tr>
                 
                 <tr>
-                    <td colspan="9">Tels: (11) 3996-3356 </td> 
+                    <td colspan="9">Tels: (11) 4509-4865 </td> 
                 </tr>
                 
 <!--PEGA OS DADOS DO CADASTRO DO USUARIO-->
                 ';
                 
-                 $verificaAssinatura = $objOrcamento->querySelecionaAssinaturaEmail($dados->idUsuario);
-                if((empty($verificaAssinatura))){
+                //  $verificaAssinatura = $objOrcamento->querySelecionaAssinaturaEmail($dados->idUsuario);
+                // if((empty($verificaAssinatura))){
                     
-                    echo '
-                    <tr>
-                    <td colspan="9" align="justify">
-                    <div class="alert alert-warning" role="alert">
-                    É necessário finalizar seu cadastro de usuário para que os dados de contato apareçam aqui.</br>
-                    Caso não deseje finalizar agora, esta mensagem não aparecerá no E-mail enviado e nem no <br/>relatório impresso.<br/>';
+                //     echo '
+                //     <tr>
+                //     <td colspan="9" align="justify">
+                //     <div class="alert alert-warning" role="alert">
+                //     É necessário finalizar seu cadastro de usuário para que os dados de contato apareçam aqui.</br>
+                //     Caso não deseje finalizar agora, esta mensagem não aparecerá no E-mail enviado e nem no <br/>relatório impresso.<br/>';
                     
-                    echo '<a href="dadosUsuario.php?acao=contato&retorno='.$_GET['busca'].'">Finalizar cadastro agora.</a></div>
-                    </td>
-                    </tr>
-                    ';
+                //     echo '<a href="dadosUsuario.php?acao=contato&retorno='.$_GET['busca'].'">Finalizar cadastro agora.</a></div>
+                //     </td>
+                //     </tr>
+                //     ';
                     
-                }else{
+                // }else{
                 
-                echo'
+                // echo'
                 
-                <tr>
-                    <td colspan="9">Cel.: ('.$res->dddcel.') '.$objFuncao->mask($res->cel, '#####-####').'</td>
-                </tr>
+                // <tr>
+                //     <td colspan="9">Cel.: ('.$res->dddcel.') '.$objFuncao->mask($res->cel, '#####-####').'</td>
+                // </tr>
                 
-                <tr>
-                    <td colspan="9">E-mail: '. $res->email.'</td>
-                </tr>';
-                }
+                // <tr>
+                //     <td colspan="9">E-mail: '. $res->email.'</td>
+                // </tr>';
+                // }
                 
                 echo '
                 <tr>
